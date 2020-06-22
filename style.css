@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-SemiBold.ttf') format('embedded-opentype'), /* Internet Explorer */
+    url('fonts/Poppins-SemiBold.woff') format('woff'), /* Pretty Modern Browsers */
+    url('fonts/Poppins-SemiBold.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'Maiandra';
+    src: url('fonts/Maiandra-GD-Regular.ttf') format('embedded-opentype'), /* Internet Explorer */
+    url('fonts/Maiandra-GD-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+    url('fonts/Maiandra-GD-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+/* #16C79E
+
+#C7163F */
+
+body {
+    background-color: #16c79e;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.image-container img {
+    width: max(40%, 250px);
+    height: 40%;
+    max-width: 500px;
+}
+
+nav {
+    background-color: #327263;
+}
+
+nav ul a {
+    font-size: 1.3rem;
+    font-family: 'Poppins';
+}
+
+.nav-wrapper {
+    text-align: center;
+}
+
+nav .brand-logo.center{
+    position: static;
+    transform: translateX(0);
+}
+
+.fixed-nav nav {
+    position: fixed;
+    top:0;
+    z-index: 1;
+  }
+
+.sidenav {
+    background-color: #327263;
+}
+
+.sidenav li > a {
+    margin-top: 7px;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.sidenav-logo {
+    text-align: center;
+}
+
+.sidenav-logo img {
+    margin-top: 15px;
+    width: 70%;
+}
+
+.landingContent .container:last-of-type {
+    margin-bottom: 4vh;
+}
+
+.container {
+    background-color: #E5F5F2;
+    height: 30vh;
+    margin-top: 2vh;
+    border-radius: 3px;
+    width: 95%;
+    max-width: 1920px;
+}
+
+.greeting {
+    text-align: center;
+    padding: 3vh;
+}
+
+.greeting span {
+    font-size: 2rem;
+    font-family: 'Poppins';
+    color: #424242;
+}
+
+.greeting p {
+    font-size: 1.3rem;
+    font-family: 'Maiandra';
+    font-weight: 600;
+    color: #636363;
+}
+
+
+
+.fixed-action-btn a {
+    background-color: #C7163F;
+}
+
+.fixed-action-btn a:hover {
+    background-color: #D8274F;
+}

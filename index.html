@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Theo</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+    <div class="image-container">
+        <img src="img/TheoLogo.png" alt="Logo">
+    </div>
+
+    <nav id="navigation">
+        <div class="nav-wrapper">
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="hide-on-med-and-down">
+                <div class="brand-logo center">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Testimonies</a></li>
+                    <li><a href="#">Certifications</a></li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-nav">
+        <li>
+            <div class="sidenav-logo">
+                <img src="img/TheoLogo.png" alt="Logo">
+            </div>
+        </li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Testimonies</a></li>
+        <li><a href="#">Certifications</a></li>
+    </ul>
+
+<div class="landingContent">
+    <div class="greeting container">
+        <span>Welcome!</span>
+        <p>Walk the plank Jack Ketch main sheet squiffy no prey,
+             no pay lateen sail schooner six pounders landlubber or just lubber me.</p>
+    </div>
+    <div class="container">
+        Importance of taking vitamins
+    </div>
+    <div class="container">
+        <span>Product Ingredients</span>
+    </div>
+    <div class="container">
+        <span>Benefits</span>
+    </div>
+    <div class="container">
+        Top Products
+    </div>
+</div>
+
+
+    <div class="fixed-action-btn">
+        <a href="https://m.me/109693223703197" target="_blank" rel="noopener noreferrer" class="btn-large">ORDER NOW</a>
+    </div>
+    
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+
+    let sideNav = document.querySelector('.sidenav');
+    M.Sidenav.init(sideNav, {});
+
+    let nav = document.querySelector('#navigation');
+    let navTop = nav.offsetTop;
+    
+    function stickyNavigation() {
+      if (window.scrollY >= navTop) {
+        document.body.classList.add('fixed-nav');
+      } else {
+        document.body.classList.remove('fixed-nav');
+      }
+    }
+
+    window.addEventListener('scroll', stickyNavigation);
+
+    </script>
+</body>
+</html>
