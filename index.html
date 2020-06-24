@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Healthy Theo</title>
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="reset.css">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -49,18 +50,84 @@
              no pay lateen sail schooner six pounders landlubber or just lubber me.</p>
     </div>
     <div class="container">
-        Importance of taking vitamins
+        <div class="row">
+            <div class="col s8">
+                Importance of taking vitamins
+            </div>
+            <div>
+                image
+            </div>
+        </div>
     </div>
-    <div class="container">
-        <span>Product Ingredients</span>
+    <div class="benefits container">
+        <div class="row">
+            <div id="1" class="col s12 m8 l8">
+                <p>Benefits of Cacao</p>
+                <ul>
+                    <li>Strengthens the Immune System</li>
+                    <li>Helps lower blood pressure</li>
+                    <li>Increases stamina & energy</li>
+                    <li>Helps improve vitality and sexual potency</li>
+                    <li>Promotes healthy skin, hair, nails & bones</li>
+                    <li>Helps protect Liver</li>
+                    <li>Aids in body detoxification</li>
+                    <li>Helps prevent:
+                        <ul>
+                            <li>Alzheimer's Disease</li>
+                            <li>Cataract & Glaucoma</li>
+                            <li>Skin Cancer</li>
+                            <li>Heart problems and blood clotting</li>
+                            <li>Osteoporosis</li>
+                        </ul>
+                    </li>
+                    <li>Helps reduce the risk of:
+                        <ul>
+                            <li>Kidney problems</li>
+                            <li>Prostate Cancer</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="2" class="col s12 m4 l4">
+                <img src="img/cacao-fruit.png" alt="cacao fruit">
+            </div>
+        </div>
     </div>
-    <div class="container">
-        <span>Benefits</span>
+    <div class="fda">
+        <img src="img/buyFDA.jpg" alt="">
     </div>
-    <div class="container">
-        Top Products
+    <div class="fda container">
+        FDA
     </div>
+    <div class="products container">
+        <p>
+            For more info <br>
+            Come check our products page<br>
+        </p>
+        <a href="https://duckduckgo.com" class="btn">Click Here!</a>
+        <p>
+            "Be the best version of yourself... your health, your choice!"
+        </p>
+    </div>
+    
 </div>
+
+<footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5>Healthy Theo</h5>
+          <p></p>You can use rows and columns here to organize your footer content.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h6>Visit Our Facebook Page</h6>
+          <ul>
+            <li><i class="fa fa-facebook" aria-hidden="true"></i><a href="https://www.facebook.com/HEALthy-Theo-109693223703197/"> Healthy Theo</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 
     <div class="fixed-action-btn">
@@ -68,7 +135,10 @@
     </div>
     
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
+    
+    // $('#2').insertBefore('#1');
 
     let sideNav = document.querySelector('.sidenav');
     M.Sidenav.init(sideNav, {});
@@ -85,6 +155,19 @@
     }
 
     window.addEventListener('scroll', stickyNavigation);
+
+    let winWidth = window.matchMedia("(max-width:375px)");
+
+    function winOrder() {
+        if(winWidth.matches) {
+        $('#2').insertBefore('#1');
+    }else {
+        $('#1').insertBefore('#2');
+    }
+    }
+
+    window.onload = winOrder;
+    window.onresize = winOrder;
 
     </script>
 </body>

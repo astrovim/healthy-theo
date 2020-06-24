@@ -17,7 +17,7 @@
 #C7163F */
 
 body {
-    background-color: #16c79e;
+    background-color: #E5F5F2;
 }
 
 .image-container {
@@ -56,6 +56,7 @@ nav .brand-logo.center{
 
 .sidenav {
     background-color: #327263;
+    background-image: linear-gradient(#327263,#327263,#327263,#327263,#63968A,#83AEA4,#B4D1CB,#E5F5F2);
 }
 
 .sidenav li > a {
@@ -73,22 +74,23 @@ nav .brand-logo.center{
     width: 70%;
 }
 
-.landingContent .container:last-of-type {
-    margin-bottom: 4vh;
-}
+/* LandingPage */
 
-.container {
+.landingContent .container {
     background-color: #E5F5F2;
-    height: 30vh;
-    margin-top: 2vh;
-    border-radius: 3px;
-    width: 95%;
-    max-width: 1920px;
+    min-height: 30vh;
+    max-width: 1000px;
+    margin-bottom: 10vh;
+    margin-top: 10vh;
+    border-top: 1px solid #327263;
 }
 
-.greeting {
+.landingContent .greeting {
     text-align: center;
-    padding: 3vh;
+    padding: 10vh 5vh 10vh 5vh;
+    width: 100%;
+    margin-top: 0px;
+    background-color: #E5F5F2;
 }
 
 .greeting span {
@@ -102,9 +104,75 @@ nav .brand-logo.center{
     font-family: 'Maiandra';
     font-weight: 600;
     color: #636363;
+    margin-top: 25px;
 }
 
+.landingContent .benefits .row {
+    margin: 25px;
+    font-family: 'Poppins';
+}
 
+.landingContent .benefits p {
+    font-size: 1.5rem;
+    color: #3D7D6E;
+    margin-bottom: 25px;
+}
+
+.landingContent .benefits li {
+    color: #5D9D8E;
+    margin-top: 10px;
+    list-style-type: disc;
+}
+
+.landingContent .benefits li ul {
+    padding-left: 25px;
+}
+
+.landingContent .benefits li ul li {
+    margin-top: 5px;
+}
+
+.landingContent .benefits img {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.landingContent .products.container {
+    text-align: center;
+    /* margin-bottom: 5vh; */
+}
+
+.landingContent .products p {
+    padding-top: 2.5em;
+    font-size: 1.5rem;
+    font-family: 'Poppins';
+    margin-bottom: 25px;
+    color: #327263;
+}
+
+.landingContent .fda {
+    text-align: center;
+}
+
+.landingContent .fda img {
+    width: min(70%,900px);
+    min-width: 300px;
+    
+}
+
+/* Landing Page */
+
+.page-footer {
+    background-color: #BCECE1;
+    color: #478778;
+    padding-bottom: 100px;
+    border-top: 1px solid #69DABF;
+}
+
+.page-footer a {
+    color: #3b5998;
+}
 
 .fixed-action-btn a {
     background-color: #C7163F;
@@ -113,3 +181,8 @@ nav .brand-logo.center{
 .fixed-action-btn a:hover {
     background-color: #D8274F;
 }
+/*
+background-image: url('img/TheoLogo.png');
+background-repeat: no-repeat;
+background-position: right;
+background-size: auto 100%; */
