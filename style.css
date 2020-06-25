@@ -55,14 +55,14 @@ nav .brand-logo.center{
   }
 
 .sidenav {
-    background-color: #327263;
-    background-image: linear-gradient(#327263,#327263,#327263,#327263,#63968A,#83AEA4,#B4D1CB,#E5F5F2);
+    background-color: #E5F5F2;
 }
 
 .sidenav li > a {
     margin-top: 7px;
-    font-size: 1.3rem;
-    color: white;
+    font-family: 'Poppins';
+    font-size: 1.5rem;
+    color: #327263;
 }
 
 .sidenav-logo {
@@ -107,6 +107,35 @@ nav .brand-logo.center{
     margin-top: 25px;
 }
 
+/* .landingContent .supplement {
+    height: 45vh;
+    background-image: url('img/jog.png');
+    background-size: 35vh;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+} */
+
+.landingContent .supplement .row img {
+    width: 80%;
+}
+
+.landingContent .supplement .row {
+    text-align: center;
+}
+
+.landingContent .supplement .row p {
+    margin-top: 50%;
+    font-size: 1.5rem;
+    font-family: 'Poppins';
+    color: #3D7D6E;
+}
+
+@media screen and (max-width: 400px) {
+    .landingContent .supplement .row p {
+        margin-top: 0;
+    }
+}
+
 .landingContent .benefits .row {
     margin: 25px;
     font-family: 'Poppins';
@@ -119,6 +148,7 @@ nav .brand-logo.center{
 }
 
 .landingContent .benefits li {
+    font-weight: 600;
     color: #5D9D8E;
     margin-top: 10px;
     list-style-type: disc;
@@ -129,6 +159,7 @@ nav .brand-logo.center{
 }
 
 .landingContent .benefits li ul li {
+    font-weight: 500;
     margin-top: 5px;
 }
 
@@ -136,19 +167,6 @@ nav .brand-logo.center{
     margin-top: 100px;
     margin-bottom: 50px;
     width: 100%;
-}
-
-.landingContent .products.container {
-    text-align: center;
-    /* margin-bottom: 5vh; */
-}
-
-.landingContent .products p {
-    padding-top: 2.5em;
-    font-size: 1.5rem;
-    font-family: 'Poppins';
-    margin-bottom: 25px;
-    color: #327263;
 }
 
 .landingContent .fda {
@@ -159,6 +177,42 @@ nav .brand-logo.center{
     width: min(70%,900px);
     min-width: 300px;
     
+}
+
+.landingContent .fda .row {
+    margin-top: 10vh;
+}
+
+.landingContent .fda .row img {
+    width: 90%;
+    min-width: 150px;
+    border: 5px solid #3D7D6E;
+}
+
+.landingContent .fda .row p {
+    margin-top: 10vh;
+    margin-bottom: 7vh;
+    font-family: 'Poppins';
+    font-size: 1.5rem;
+    color: #3D7D6E;
+}
+
+.landingContent .fda .row a {
+    font-family: 'Maiandra';
+    font-size: 1.3rem;
+}
+
+.landingContent .products.container {
+    text-align: center;
+    font-family: 'Maiandra';
+    /* margin-bottom: 5vh; */
+}
+
+.landingContent .products p {
+    padding-top: 2.5em;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: #327263;
 }
 
 /* Landing Page */
