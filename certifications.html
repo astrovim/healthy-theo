@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Theo</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+    <div class="image-container">
+        <img src="img/TheoLogo2.png" alt="Logo">
+    </div>
+
+    <nav id="navigation">
+        <div class="nav-wrapper">
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger hide-on-med-and-up"><i class="material-icons">menu</i></a>
+            <ul class="hide-on-small-only">
+                <div class="brand-logo center">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Testimonies</a></li>
+                    <li><a href="#">Certifications</a></li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-nav">
+        <li>
+            <div class="sidenav-logo">
+                <img src="img/TheoLogo2.png" alt="Logo">
+            </div>
+        </li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Testimonies</a></li>
+        <li><a href="#">Certifications</a></li>
+    </ul>
+
+<main class="certificates">
+    <div class="certHeader">
+        <H1>CERTIFICATES</H1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col s5">
+                <img id="fdaCert" src="img/certificates/FDACertificate.jpg" alt="FDA Certificate">
+                <div id="fdaModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img src="modal-content" id="img01">
+                </div>
+            </div>
+            <div class="col s7">
+                FDA Certificate
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s7">
+                Halal Certificate
+            </div>
+            <div class="col s5">
+                <img id="halalCert" src="img/certificates/HalalCertificate.jpg" alt="Halal Certificate">
+                <div id="halalModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img src="modal-content" id="img02">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s5">
+                <img id="licOpCert" src="img/certificates/HalalLicenseToOperate.jpg" alt="License to Operate">
+                <div id="licOpModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img src="modal-content" id="img03">
+                </div>
+            </div>
+            <div class="col s7">
+                License to Operate
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s7">
+                Product Certificate
+            </div>
+            <div class="col s5">
+                <img id="prodCert" src="img/certificates/HalalProductCertificate.jpg" alt="Product Certificate">
+                <div id="prodModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img src="modal-content" id="img04">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s5">
+                <img id="awards" src="img/certificates/F2NAwards.jpg" alt="Awards">
+                <div id="awardModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img src="modal-content" id="img05">
+                </div>
+            </div>
+            <div class="col s7">
+                F2N Awards
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col m6 s12">
+            <h5>Contact Us</h5>
+            <ul>
+                <li>0920 132 8487 - 0956 735 8684</li>
+                <!-- <li>0956 735 8684</li> -->
+                <li></li>
+            </ul>
+        </div>
+        <div class="col m4 s12">
+          <h5>FOLLOW US</h5>
+          <ul>
+            <li><i class="fa fa-facebook" aria-hidden="true"></i><a href="https://www.facebook.com/HEALthy-Theo-109693223703197/"> Healthy Theo</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+    <div class="fixed-action-btn">
+        <a href="https://m.me/109693223703197" target="_blank" rel="noopener noreferrer" class="btn-large">ORDER NOW</a>
+    </div>
+    
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    
+    // $('#2').insertBefore('#1');
+
+    let sideNav = document.querySelector('.sidenav');
+    M.Sidenav.init(sideNav, {});
+
+    let nav = document.querySelector('#navigation');
+    let navTop = nav.offsetTop;
+    
+    function stickyNavigation() {
+      if (window.scrollY >= navTop) {
+        document.body.classList.add('fixed-nav');
+      } else {
+        document.body.classList.remove('fixed-nav');
+      }
+    }
+
+    window.addEventListener('scroll', stickyNavigation);
+
+    let winWidth = window.matchMedia("(max-width:375px)");
+
+    function winOrder() {
+        if(winWidth.matches) {
+        $('#2').insertBefore('#1');
+    }else {
+        $('#1').insertBefore('#2');
+    }
+    }
+
+    window.onload = winOrder;
+    window.onresize = winOrder;
+
+    function certModal (imgModal, certImg, imgN, closeN) {
+    let modal = document.getElementById(imgModal);
+
+    let img = document.getElementById(certImg);
+    let modalImg = document.getElementById(imgN);
+    
+    img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        if(winWidth.matches) {
+            modalImg.style.width = "90%";
+        }
+        modalImg.style.boxShadow = "none";
+    }
+
+    let span = document.getElementsByClassName("close")[closeN];
+
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+    }
+
+    window.onload = certModal ("fdaModal", "fdaCert", "img01", 0);
+    window.onload = certModal ("halalModal", "halalCert", "img02", 1);
+    window.onload = certModal ("licOpModal", "licOpCert" , "img03", 2);
+    window.onload = certModal ("prodModal", "prodCert" , "img04", 3);
+    window.onload = certModal ("awardModal", "awards" , "img05", 4);
+
+    // let modal = document.getElementById("fdaModal");
+
+    // let img = document.getElementById("fdaCert");
+    // let modalImg = document.getElementById("img01");
+    
+    // img.onclick = function() {
+    //     modal.style.display = "block";
+    //     modalImg.src = this.src;
+    //     if(winWidth.matches) {
+    //         modalImg.style.width = "90%";
+    //     }
+    // }
+
+    // let span = document.getElementsByClassName("close")[0];
+
+    // span.onclick = function () {
+    //     modal.style.display = "none";
+    // }
+
+    </script>
+</body>
+</html>

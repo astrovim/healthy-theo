@@ -18,6 +18,13 @@
 
 body {
     background-color: #E5F5F2;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 .image-container {
@@ -26,7 +33,6 @@ body {
 
 .image-container img {
     width: max(40%, 250px);
-    height: 40%;
     max-width: 500px;
 }
 
@@ -96,14 +102,14 @@ nav .brand-logo.center{
 .greeting span {
     font-size: 2rem;
     font-family: 'Poppins';
-    color: #424242;
+    color: #327263;
 }
 
 .greeting p {
     font-size: 1.3rem;
     font-family: 'Maiandra';
     font-weight: 600;
-    color: #636363;
+    color: #5D9D8E;
     margin-top: 25px;
 }
 
@@ -221,6 +227,121 @@ nav .brand-logo.center{
 
 /* Landing Page */
 
+/* Certifications */
+
+.certificates .container {
+    background-color: #E5F5F2;
+    min-height: 30vh;
+    max-width: 1000px;
+    margin-bottom: 10vh;
+    /* margin-top: 10vh; */
+    /* border-top: 1px solid #327263; */
+}
+
+.certificates .container .row {
+    border-top: 1px solid #327263;
+}
+
+.certificates .certHeader {
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.certificates .certHeader h1 {
+    font-family: 'Poppins';
+    font-size: 3rem;
+    color: #327263;
+}
+
+.certificates .container .row .col.s5 {
+    margin-top: 10%;
+    text-align: center;
+    height: 100%;
+}
+
+.certificates .container .row img {
+    width: 70%;
+    max-width: 630px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 5px 5px 5px grey;
+}
+
+.certificates .container .row img:hover {
+    opacity: 0.9;
+    box-shadow: 10px 10px 10px grey;
+}
+
+.certificates .container .row .col.s7 {
+    margin-top: 20%;
+    text-align: center;
+    font-size: 5vmin;
+    height: 100%;
+}
+
+.certificates .container .row {
+    color: #36665B;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform: scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover, .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+
+/* Certifications */
+
+/* Page Footer */
+
 .page-footer {
     background-color: #BCECE1;
     color: #478778;
@@ -246,11 +367,16 @@ nav .brand-logo.center{
 
 .fixed-action-btn a {
     background-color: #C7163F;
+    box-shadow: 5px 5px 5px grey;
 }
 
 .fixed-action-btn a:hover {
     background-color: #D8274F;
+    box-shadow: 3px 3px 3px grey;
 }
+
+/* Page Footer */
+
 /*
 background-image: url('img/TheoLogo.png');
 background-repeat: no-repeat;
